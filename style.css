@@ -1,0 +1,526 @@
+body{
+    background-color: #D5DCE8;
+    margin: 0;
+  }
+  .nunito-default {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style:normal;
+  }
+
+  .nunito-bold {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style:normal;
+  }
+  .nunito-light {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style:normal;
+  }
+
+/* HEADER */
+
+.navBar{
+    position: sticky; 
+    display:block; 
+    top: 0px;  
+    background-color: #2575FA; 
+    width: 100%; 
+    height: 8vh; 
+    z-index: 100;
+}
+
+.logoImg{
+    margin: 1.2vh 60px ;
+}
+
+.LoginHeader{
+position: absolute;
+right: 65px;
+top: 50%;
+transform: translateY(-50%);
+color: white;
+text-decoration: none;
+font-family: "nunito";
+transition: color 0.3s ease;
+}
+
+
+.LoginHeader i{
+    margin-right: 5px;
+}
+
+ /* BODY */
+
+.welcomeContainer{
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+    width: 129vh;
+    padding: 10px 40px;
+    height: 35vh;
+    border-radius: 20px;
+    background-color: #ff5566;
+    text-align: start;
+    
+
+}
+
+.welcomeText{
+    color: white;
+    font-size: 35px;
+    width: 70%;
+    margin-top: 37px;
+    word-wrap: break-word;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.welcomeImg{
+    width: 380px;
+    height: 230px;
+    align-self: flex-end;
+    margin: auto;
+    border-radius: 52px 16px;
+}
+
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: fit-content;
+    gap: 30px;
+    height: 6vh;
+    border-radius: 16px;
+    align-items: center;
+
+}
+
+.fa-map-marker{
+    margin: 0px 0px 3px 18px;
+    transform: scale(1.5);
+    color: #2575FA;
+    align-items: flex-start;
+    
+}
+
+#searchInput{
+    border: 0;
+    outline: none;
+    width: 20vw;
+    height: 90%;
+    font-size: 16px;
+}
+
+
+.searchButton{
+    padding: 0px;
+    height: inherit;
+    width: 55px;
+    background-color: #2575FA;
+    margin-right: 0px;
+    border-radius: 16px;
+    align-self: flex-end;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.searchButton i{
+    color: white;
+    height: fit-content;
+    margin: auto;
+
+}
+.searchButton:hover{
+    background-color: #487ed4;
+}
+
+@media (max-width: 1600px){
+    #listingContainer{
+        padding: 20px 20px !important;
+    }
+  }
+
+@media (max-width: 1480px){
+
+  .welcomeContainer{
+      width: 80vw;
+  }
+  .welcomeText{
+      width: 90%;
+  }
+}
+
+ @media (max-width: 1250px){
+  .welcomeText{
+      width: 90%;
+      font-size: 37px;
+  }
+  .welcomeImg{
+      width: 330px;
+      height: 220px;
+  }
+}
+@media (max-width: 910px){
+    .LoginHeader{
+        display: none;
+      }
+    .logoImg{
+        margin: 1.2vh calc(50% - 90px);
+    }
+    
+    .welcomeImg{
+        display: none;
+    }
+    .welcomeText{
+        display: none;
+    }
+    .welcomeContainer{
+        height: fit-content;
+        justify-content: center;
+        width: 60%;
+        padding: 10px;
+    }
+    .searchBar{
+        width: 50vw;
+        gap: 20px;
+    }
+    #searchInput{
+        width: 100%;
+    }
+    .searchButton{
+        width: 90px;
+    }
+}
+  
+@media (max-height: 866px){
+    .welcomeImg{
+        width: 340px;
+        height: 200px;
+    }
+    .searchButton{
+    width: 60px;
+    }
+}
+
+
+#listingContainer{
+    padding: 20px 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    grid-auto-rows: 380px; 
+    justify-content:center;
+    gap: 30px 20px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+    height: 380px;
+}
+
+.card:hover{
+    box-shadow: 0 4px 24px #0000002f;
+}
+
+  /* CARROUSEL GENERIC */
+.carrouselContainer{
+    border-radius: 15px 15px 0px 0px;
+    width: inherit;
+    height: 210px;
+
+}
+
+.carrouselPhoto{
+    border-radius: 15px 15px 0px 0px;
+    height: 212px;
+    width: 302px;
+}
+
+
+  /* SPLIDE CARROUSEL */
+.splide{
+    padding: 0 !important;
+}
+
+.splide__track{
+    border-radius: 15px 15px 0px 0px !important;
+}
+
+.splide__arrow:hover:not(:disabled) svg {
+    fill: #ff5566;
+  } 
+
+
+  /* CARD */
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+
+.advInfoContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.advLocText{
+    overflow-wrap: break-word;
+    overflow: hidden;
+    height: 25px;
+    
+}
+
+.advSizeText{
+    margin-left: 6px;    
+}
+
+.advPriceText{
+margin-top: 4px;
+
+}
+.advButton{
+    margin: 12px auto;
+    padding: 10px 30px;
+    background-color: #ff5566;
+    width: fit-content;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.15s ease-in-out;
+
+}
+
+.advButton:hover{
+    background-color: #c75964;
+    cursor: pointer;
+}
+
+
+
+/* FOOTER */
+
+
+/* BAJAR PADDING PARA Q SEA + RESPONSIVE */
+
+.columna { 
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+} 
+
+.columna a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+  
+.footerBar {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: top; 
+    background-color: #2575FA;
+    position: relative;
+}
+  
+.columna {
+    flex: 1; 
+    padding: 15px; 
+    text-align: left; 
+}
+  
+ul{
+    list-style-type: none; 
+    padding: 0%;
+}
+  
+h3{
+    font-family: "Roboto", sans-serif;
+    font-weight:600;
+    font-style: normal;
+}
+  
+.footerBar a{
+   transition: color 0.3s ease;
+}
+
+.footerBar a:hover{
+    color: #ff5566;
+}
+/* ------- */
+
+.advContainer{
+  width: 60%;
+  margin: 5vh auto;
+}
+
+.imgContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60vh;
+    margin-top: 30px;
+}
+
+.secImgContainer{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.bigImg{
+  width: 60%;
+  border-radius: 30px 0px 0px 40px;
+}
+
+.segImg:first-child{
+    height: 30vh;
+    border-radius: 0px 30px 0px 0px;
+}
+
+.segImg:last-child{
+    height: 30vh;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.backButton{
+    padding: 10px;
+    background: #ff5566;    
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* NUEVO */
+.advertIdField{
+    display: none;
+}
+
+.cardContent form{
+margin: 15px auto;
+width: fit-content;
+}
+
+/* Login */
+.login{
+    font-family: "nunito";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+
+}
+
+#LoginForm{
+    display: flex;
+    flex-direction: column;
+    background: #ff5566;
+    text-align: center;
+    padding: 30px 35px;
+    box-shadow: 0 5px 7px;
+    border-radius: 17px;
+}
+
+#LoginForm label{
+    margin-bottom: 30px;
+}
+
+#LoginForm label .fa-solid{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+#LoginForm label input{
+    outline: none;
+    border-radius: 10px;
+    color: rgb(101, 101, 101);
+    border: none;
+    padding: 8px 5px;
+    font-size: 23px;
+}
+
+#LoginForm label input::placeholder{
+    font-size: 15px;
+}
+
+#LoginForm .link{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#LoginForm #loginButton{
+    background-color: #2575FA;
+    border-radius: 17px;
+    color: white;
+    padding: 8px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+#LoginForm h1{
+    font-size: 32px;
+}
+
+#LoginForm a{
+transition: color 0.3s ease;
+}
+
+#LoginForm a:hover {
+    color: #2575FA; 
+}
+
+#infoCard{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #ff5566;
+    width: fit-content;
+    margin: 50px auto;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#infoCard svg{
+    fill: white;
+}
+
+#infoText{
+    color: white;
+    margin: 0px !important;
+}
