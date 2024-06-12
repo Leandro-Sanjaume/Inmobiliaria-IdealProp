@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
       let userId = (window.location.search).split("=")[1];
       if(userId == null){
          alert("Please Login before");
-         window.location.replace("/login.html");      
+         window.location.replace("/Inmobiliaria-IdealProp/login.html");      
       }else if(userId == ''){
          userId = 'de Vuelta!'
       }
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function(){
                for(x of loginInfo){
                   if($("#email").val() == x.email && $("#password").val() == x.pass){
                      $("#infoText").text("Has sido Logueado Correctamente");
-                     window.location.replace("/advertListing.html?user="+x.email);      
+                     window.location.replace("/Inmobiliaria-IdealProp/advertListing.html?user="+x.email);      
                   }
                }
                $("#infoText").text("No se ha encontrado el mail/contraseña")
